@@ -1,0 +1,1 @@
+console.log("testing the blog app start");
