@@ -19,3 +19,5 @@ const userSchema = new Schema({
 });
 
 export default mongoose.model("User", userSchema);
+
+// it will be store as the users since we use the "User"
