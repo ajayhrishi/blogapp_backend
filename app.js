@@ -7,7 +7,7 @@ mongoose.connect('mongodb+srv://AjayHrishi:WhTgD53IVEfl93fQ@blogappbackend.nsevk
 .then(()=>console.log('DataBase is connected')).catch((err)=>console.log(err));
 
 
-//ehjqZOlGITIwhGky 
+// ehjqZOlGITIwhGky 
 // password to the data base. Not allowed to access from anywhere right now. 
 // WhTgD53IVEfl93fQ password to the backend database. 
 
