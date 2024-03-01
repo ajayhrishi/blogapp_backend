@@ -36,7 +36,8 @@
         const user = new User({ // will form the data in User Model
             name,
             email,
-            password: hashedPassword  
+            password: hashedPassword,
+            blogs: []
         });
     //npm i bcryptjs  used to install the module that will help to encrypt the password
     
@@ -69,7 +70,7 @@
 
     }
 
-    const deleteUser = async(req,res,next)=>{
+    const deleteUser = async(req,res,next)=>{  // Pending to Finish
         let user;
         try{
 
@@ -82,8 +83,8 @@
     }
 
 
-    const editUser = async(req,res,next)=>{
-        let user;
+    const editUser = async(req,res,next)=>{ // Pending to Finish
+
         try{
 
         }catch(err){
