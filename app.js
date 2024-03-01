@@ -1,13 +1,14 @@
 import express from "express";
 import mongoose from "mongoose"
-import router from "H:/Studies/Software Engineer/Projetcs/2. BlogApp/backend/routes/userRoutes.js";
+import router from './routes/userRoutes.js';
 
 const app = express();
-
+app.use(express.json());
+app.use('/api/user',router);
 mongoose.connect('mongodb+srv://AjayHrishi:WhTgD53IVEfl93fQ@blogappbackend.nsevk9k.mongodb.net/?retryWrites=true&w=majority').then(app.listen(5000))
 .then(()=>console.log('DataBase is connected')).catch((err)=>console.log(err));
 
-app.use('/api/user',router);
+
 
 
 // ehjqZOlGITIwhGky 
