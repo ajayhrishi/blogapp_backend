@@ -17,7 +17,7 @@
     }
 
     const signUp = async(req,res,next)=>{
-
+        console.log('signUpfunction in the backend triggered');
         let {name,email,password}= req.body;
         console.log('recieved request to add the user with the detalis', 'name: ',name,'email: ',email,'password: ',password);
         let existinguser;
@@ -51,6 +51,7 @@
     }
     
     const login = async(req,res,next)=>{
+        console.log("triggered the login function");
         let {email,password} = req.body;
         let existinguser;
         try{
@@ -59,13 +60,15 @@
             console.log(err);
         }
         if(!existinguser){
+            console.log('existing user');
             return res.status(404).json({message:"there is no user with this email address, please signUp"});
         }
         const isCorrectPassword = bcrypt.compareSync(password, existinguser.password);
         if(!isCorrectPassword){
+            console.log('password incorrect');
             return res.status(400).json({message:"IncorrectPassword"});
         }
-        
+        console.log('sending back the loggedin respose')
         return res.status(200).json({message:'LoggedIn'});
 
     }
@@ -77,9 +80,6 @@
         }catch(err){
             console.log(err);
         }
-        
-
-
     }
 
 
