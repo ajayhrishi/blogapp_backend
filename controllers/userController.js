@@ -69,7 +69,7 @@
             return res.status(400).json({message:"IncorrectPassword"});
         }
         console.log('sending back the loggedin respose')
-        return res.status(200).json({message:'LoggedIn'});
+        return res.status(200).json({message:'LoggedIn', user:existinguser});
 
     }
 

@@ -111,7 +111,7 @@ const updateBlog = async(req,res,next)=>{
     if(!UserBlogs){
         return res.status(404).json({message:"there are no blogs for the user"});
     }
-    return res.status(200).json( {userBlog: UserBlogs});
+    return res.status(200).json( {blogs: UserBlogs});
  }
 
 
