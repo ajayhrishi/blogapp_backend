@@ -1,7 +1,7 @@
 import express from "express";
 import mongoose from "mongoose"
-import router from './routes/userRoutes.js';
-import blogRouter from './routes/blogRoutes.js'
+import router from './src/routes/userRoutes.js';
+import blogRouter from './src/routes/blogRoutes.js'
 import cors from 'cors'
 import dotenv from "dotenv";
 dotenv.config();
@@ -20,8 +20,3 @@ mongoose.connect(db).then(app.listen(5000))
 
 
 
-// ehjqZOlGITIwhGky 
-// password to the data base. Not allowed to access from anywhere right now. 
-// WhTgD53IVEfl93fQ password to the backend database. 
-
-// stopped at 23:00
